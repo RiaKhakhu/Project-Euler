@@ -16,7 +16,7 @@ def find_largest_palindrome(n):
     for i in range(start,stop):
         for j in range(start, stop):
             product= i*j
-            if isPalindrome(product) and product > largestPalindrome:
+            if product > largestPalindrome and isPalindrome(product):
                 largestPalindrome = product
                 product_pair = (i,j)
     return [largestPalindrome,product_pair]
