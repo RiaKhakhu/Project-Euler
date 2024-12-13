@@ -1,8 +1,6 @@
 # author: Khakhu Ria
 # version: 13/12/2024
 
-from math import sqrt
-
 
 # problem statement: find the first triangular number with 500 divisors
 
