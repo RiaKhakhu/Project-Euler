@@ -9,26 +9,25 @@ def find_primes_sum(n):
     Using a slightly modified Sieve of Eratosthenes, this function sums all primes below n (inclusive)
 
     """
-    compositeNumbers = {} # dictionary of necessary composite numbers, to help identify primes, key(composite number): value(one of its prime factors)
+    compositeNumbers = {}  # dictionary of necessary composite numbers, to help identify primes, key(composite number): value(one of its prime factors)
     primes_sum = 0
-    for i in range(2, n+1):
+    for i in range(2, n + 1):
         if i in compositeNumbers:
             primeFactor = compositeNumbers[i]
-            next_multiple = i+primeFactor
+            next_multiple = i + primeFactor
 
             # avoid complications where 2 prime factors have the same composite-number-key
-            while next_multiple in compositeNumbers: 
-                next_multiple+=primeFactor
+            while next_multiple in compositeNumbers:
+                next_multiple += primeFactor
 
             compositeNumbers[next_multiple] = primeFactor
-            del compositeNumbers[i] # remove unnessesary composite numbers to free up memory
+            del compositeNumbers[i]  # remove unnessesary composite numbers to free up memory
         else:
-            compositeNumbers[i*i]=i
-            primes_sum+=i
-            
+            compositeNumbers[i * i] = i
+            primes_sum += i
+
     return primes_sum
 
 
 if __name__ == "__main__":
     print(find_primes_sum(2000000))
-    
