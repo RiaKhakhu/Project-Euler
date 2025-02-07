@@ -7,7 +7,7 @@
 
 public class Prolem_19_counting_sundays {
     /**
-     * Given a starting and ending year, returns and array of the dates of all 1st of each month between the given years
+     * Given a starting and ending year, returns an array of the dates of all 1st of each month between the given years
      * @param start The starting year
      * @param end The ending year
      * @return All the dates of the 1st of each month in the form [day, month, year]
