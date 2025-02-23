@@ -52,7 +52,7 @@ public class problem_22_names_scores {
     {
         if (arr.length==0 || arr.length==1) { return arr;}
 
-        String[] sortedArr = new String[arr.length];
+        String[] sortedArr;
         String[] leftHalf = new String[(int)arr.length/2];
         String[] rightHalf = new String[arr.length-leftHalf.length];
         
@@ -72,8 +72,8 @@ public class problem_22_names_scores {
     {
         String[] mergedArr = new String[arr1.length+arr2.length];
         int k = 0; // next index of mergedArr to be occupied
-        int i = 0; // index of arr1 to be compared with index j of arr2
-        int j = 0; 
+        int i = 0, j = 0; // index  i of arr1 to be compared with index j of arr2
+         
         while (true)
         {
             if (i==arr1.length && j == arr2.length) { break;} // elements from both arrays merged
