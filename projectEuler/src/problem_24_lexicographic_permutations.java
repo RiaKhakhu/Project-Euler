@@ -60,7 +60,7 @@ import java.util.Scanner;
                 else break;
             }
         }
-        System.out.println(totalPermutations);
+
         // show the permutation on the terminal
         for (int digit : permutation) { System.out.print(digit);}
     }
